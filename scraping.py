@@ -78,7 +78,7 @@ if response.status_code == 200:
     motors1 = get_motor(basic_info)[0]
     mileages1 = get_motor(basic_info)[1]
 
-    print(f"Car Links: {car_links}")
+    #print(f"Car Links: {car_links}")
     print(f"Names: {names1}")
     print(f"Prices: {prices1}")
     print(f"Years: {years1}")
