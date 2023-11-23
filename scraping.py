@@ -21,7 +21,7 @@ def get_names(basic_info):
     for item in basic_info:
         for i in item:
             try:
-                names.append(i.find_all("h1", attrs={"class": "b-advert-title-inner qa-advert-title b-advert-title-inner--h1"})[0].text.strip())
+                names.append(i.find_all('div', attrs={'class': 'b-advert-title-inner'})[0].text.strip())
             except IndexError:
                 names.append(None)
     return names
@@ -31,7 +31,7 @@ def get_prices(basic_info):
     prices = []
     for item in basic_info:
         for i in item:
-            prices.append(i.find_all("div", attrs={"class": "qa-advert-price-view b-alt-advert-price__container"})[0].string.replace(u'\xa0', u' ').strip())
+            prices.append(i.find_all('div', attrs={'class': 'qa-advert-price'})[0].string.replace(u'\xa0', u' ').strip())
     return prices
 
 
@@ -84,6 +84,11 @@ if response.status_code == 200:
     print(f"Years: {years1}")
     print(f"Motors: {motors1}")
     print(f"Mileages: {mileages1}")
+
+    with open('car_links.html', 'w') as file:
+        for link in car_links:
+            # Write each link to a new line in the file
+            file.write(str(link) + '\n')
 
     names.extend(names1)
     prices.extend(prices1)
