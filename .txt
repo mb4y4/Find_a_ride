@@ -1,0 +1,14 @@
+<div class="b-advert-title-inner qa-advert-title b-advert-title-inner--h1">
+    Peugeot 2008 2016 White
+  </div>
+
+  <div class="qa-advert-price-view b-alt-advert-price__container">
+  <span itemprop="price" content="1770000" class="qa-advert-price-view-title b-alt-advert-price__text">
+  <span><span itemprop="priceCurrency" content="KES">KSh</span> 1,770,000, Negotiable</span> <!----></span>
+  <link itemprop="availability" href="https://schema.org/InStock"></div>
+
+  <div itemprop="productionDate" class="b-advert-attribute__value">
+      2016
+     <!----></div>
+
+     
